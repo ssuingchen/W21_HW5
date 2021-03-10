@@ -1,11 +1,19 @@
+######################################
+##### Name:Ssu-Ying Chen #############
+##### Uniqname:cssuing ###############
+######################################
+
 import random
 import unittest
 
 VERSION = 0.01
  
 class Card:
-    '''a standard playing card
+
+    '''
+    a standard playing card
     cards will have a suit and a rank
+    
     Class Attributes
     ----------------
     suit_names: list
@@ -15,6 +23,7 @@ class Card:
     faces: dict
         maps face cards' rank name
         1:Ace, 11:Jack, 12:Queen,  13:King
+    
     Instance Attributes
     -------------------
     suit: int
@@ -26,6 +35,7 @@ class Card:
     rank_name: string
         the name of the card's rank (e.g., "King" or "3")
     '''
+
     suit_names = ["Diamonds","Clubs","Hearts","Spades"]
     faces = {1:"Ace",11:"Jack",12:"Queen",13:"King"}
  
@@ -45,7 +55,10 @@ class Card:
  
 
 class Deck:
-    '''a deck of Cards
+
+    '''
+    a deck of Cards
+
     Instance Attributes
     -------------------
     cards: list
@@ -62,11 +75,15 @@ class Deck:
                 self.cards.append(card) # appends in a sorted order
  
     def deal_card(self, i=-1):
-        '''remove a card from the Deck
+
+        '''
+        remove a card from the Deck
+        
         Parameters  
         -------------------
         i: int (optional)
-            the index of the ard to remove. Default (-1) will remove the "top" card
+            the index of the card to remove. Default (-1) will remove the "top" card
+        
         Returns
         -------
         Card
@@ -75,11 +92,15 @@ class Deck:
         return self.cards.pop(i) 
  
     def shuffle(self):
-        '''shuffles (randomizes the order) of the Cards
+
+        '''
+        shuffles (randomizes the order) of the Cards
         self.cards is modified in place
+        
         Parameters  
         ----------
         None
+        
         Returns
         -------
         None
@@ -94,13 +115,16 @@ class Deck:
             self.cards.append(card) # append it to the list
     
     def sort_cards(self):
-        '''returns the Deck to its original order
-        
+
+        '''
+        returns the Deck to its original order
         Cards will be in the same order as when Deck was constructed.
         self.cards is modified in place.
+        
         Parameters  
         ----------
         None
+        
         Returns
         -------
         None
@@ -112,14 +136,17 @@ class Deck:
                 self.cards.append(card)
  
     def deal_hand(self, hand_size):
-        '''removes and returns hand_size cards from the Deck
-        
+
+        '''
+        removes and returns hand_size cards from the Deck
         self.cards is modified in place. Deck size will be reduced
         by hand_size
+        
         Parameters  
         -------------------
         hand_size: int
             the number of cards to deal
+        
         Returns
         -------
         list
@@ -131,7 +158,9 @@ class Deck:
         return hand_cards
 
 def print_hand(hand):
-    '''prints a hand in a compact form
+
+    '''
+    prints a hand in a compact form
     
     Parameters  
     -------------------
